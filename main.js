@@ -93,7 +93,7 @@ async function main() {
         }
         function telegram(message) {
             const bot = new Telegraf("6565328483:AAGOUIwrwo3xiKrqKJsc40wGvDb6aWM67mc")
-            bot.telegram.sendMessage("-1001832440382", message, { parse_mode: 'HTML' })
+            bot.telegram.sendMessage("-1001807619335", message, { parse_mode: 'HTML' })
         }
 
         const getSocket = response => {
@@ -155,7 +155,7 @@ function sendBoasVindas() {
     const bot = new Telegraf("6565328483:AAGOUIwrwo3xiKrqKJsc40wGvDb6aWM67mc"); 
 
     setInterval(() => {
-        bot.telegram.sendMessage("-1001832440382", message, {
+        bot.telegram.sendMessage("-1001807619335", message, {
             parse_mode: 'HTML',
             reply_markup: buttons
         });
