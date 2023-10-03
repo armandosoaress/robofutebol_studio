@@ -13,7 +13,10 @@ async function main() {
     var entrada = "";
     var red = 0;
 
-    browser = await puppeteer.launch({ executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', headless: false });
+    browser = await puppeteer.launch({ 
+        // executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+        executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
+         headless: false });
 
     const page = await browser.newPage();
 
