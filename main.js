@@ -65,9 +65,9 @@ async function main() {
                 } else {
                     red = 1;
                     const message = `\n❌ RED ❌
-               \n🏃‍♂️ RESULTADO: ${outuput}
-               \n➡️ <a href="https://sambabet.com/virtual/">Venha jogar com a gente!</a>`;
-                    telegram(message);
+                    \n🏃‍♂️ RESULTADO: ${outuput}
+                    \n➡️ <a href="https://sambabet.com/virtual/">Venha jogar com a gente!</a>`;
+                    // telegram(message);
                 }
                 entrada = "";
             }
@@ -85,8 +85,8 @@ async function main() {
                     entrada = "Tiger";
                 }
                 const message = `\n✅ ENTRADA CONFIRMADA ✅
-     \n🏃‍♂️ ENTRAR NO: ${input}
-     \n➡️ <a href="https://sambabet.com/virtual/">Venha jogar com a gente!</a>`;
+                \n🏃‍♂️ ENTRAR NO: ${input}
+                \n➡️ <a href="https://sambabet.com/virtual/">Venha jogar com a gente!</a>`;
                 telegram(message);
             }
 
