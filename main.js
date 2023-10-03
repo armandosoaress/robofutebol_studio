@@ -60,13 +60,13 @@ async function main() {
                 if (array[array.length - 1] == entrada) {
                     const message = `\n✅ GREEN ✅
                \n🏃‍♂️ RESULTADO: ${outuput}
-               \n➡️ <a href="https://sambabet.com/virtual/">Venha jogar com a gente!</a>`;
+               \n➡️ <a href="https://affstream.click/KTHhsv43">Venha jogar com a gente!</a>`;
                     telegram(message);
                 } else {
                     red = 1;
                     const message = `\n❌ RED ❌
                     \n🏃‍♂️ RESULTADO: ${outuput}
-                    \n➡️ <a href="https://sambabet.com/virtual/">Venha jogar com a gente!</a>`;
+                    \n➡️ <a href="https://affstream.click/KTHhsv43">Venha jogar com a gente!</a>`;
                     // telegram(message);
                 }
                 entrada = "";
@@ -86,7 +86,7 @@ async function main() {
                 }
                 const message = `\n✅ ENTRADA CONFIRMADA ✅
                 \n🏃‍♂️ ENTRAR NO: ${input}
-                \n➡️ <a href="https://sambabet.com/virtual/">Venha jogar com a gente!</a>`;
+                \n➡️ <a href="https://affstream.click/KTHhsv43">Venha jogar com a gente!</a>`;
                 telegram(message);
             }
 
