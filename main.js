@@ -67,7 +67,7 @@ async function main() {
                     const message = `\n❌ RED ❌
                     \n🏃‍♂️ RESULTADO: ${outuput}
                     \n➡️ <a href="https://affstream.click/KTHhsv43">Venha jogar com a gente!</a>`;
-                    // telegram(message);
+                    
                 }
                 entrada = "";
             }
