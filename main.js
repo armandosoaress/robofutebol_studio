@@ -14,12 +14,23 @@ async function main() {
         browser = await puppeteer.launch({
             // "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
             executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
-            headless: false
+            headless: false,
+            args: ['--start-fullscreen'],
         });
 
         const pages = await browser.pages();
 
         const page = await browser.newPage();
+
+        // Obtém as dimensões da tela do dispositivo
+        const { width, height } = await page.evaluate(() => ({
+            width: window.screen.width,
+            height: window.screen.height,
+        }));
+
+        // Define o tamanho da janela da página para as dimensões da tela do dispositivo
+        await page.setViewport({ width, height });
+
 
         await page.goto('https://sambabet.com/');
 
