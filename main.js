@@ -67,7 +67,7 @@ async function main() {
                     const message = `\n❌ RED ❌
                     \n🏃‍♂️ RESULTADO: ${outuput}
                     \n➡️ <a href="https://affstream.click/KTHhsv43">Venha jogar com a gente!</a>`;
-                    
+
                 }
                 entrada = "";
             }
@@ -152,7 +152,7 @@ function sendBoasVindas() {
     }
     const message = `✅ Sinais 24 horas por dia\n✅ Usamos Martingale\n\nOpere com segurança\n\n🤑 Comece a operar e faturar agora mesmo!\n🤑 Ganhe um bônus de 150% ate 1000 usando o código VEMSAMBAR150👇👇`;
 
-    const bot = new Telegraf("6565328483:AAGOUIwrwo3xiKrqKJsc40wGvDb6aWM67mc"); 
+    const bot = new Telegraf("6565328483:AAGOUIwrwo3xiKrqKJsc40wGvDb6aWM67mc");
 
     setInterval(() => {
         bot.telegram.sendMessage("-1001807619335", message, {
