@@ -150,7 +150,7 @@ function sendBoasVindas() {
             [{ text: "💰 Entre - Sinal da Sorte! 💰", url: "https://affstream.click/KTHhsv43" }]
         ]
     }
-    const message = `✅ Sinais 24 horas por dia\n✅ Usamos Martingale\n\nOpere com segurança\n\n🤑 Comece a operar e faturar agora mesmo!\n🤑 Ganhe um bônus de 200% usando o código NEGODI200👇👇`;
+    const message = `✅ Sinais 24 horas por dia\n✅ Usamos Martingale\n\nOpere com segurança\n\n🤑 Comece a operar e faturar agora mesmo!\n🤑 Ganhe um bônus de 150% ate 1000 usando o código VEMSAMBAR150👇👇`;
 
     const bot = new Telegraf("6565328483:AAGOUIwrwo3xiKrqKJsc40wGvDb6aWM67mc"); 
 
