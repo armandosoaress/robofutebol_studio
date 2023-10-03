@@ -93,7 +93,7 @@ async function main() {
         }
         function telegram(message) {
             const bot = new Telegraf("6565328483:AAGOUIwrwo3xiKrqKJsc40wGvDb6aWM67mc")
-            bot.telegram.sendMessage("-1001807619335", message, { parse_mode: 'HTML' })
+            bot.telegram.sendMessage("-1001832440382", message, { parse_mode: 'HTML' })
         }
 
         const getSocket = response => {
@@ -142,3 +142,25 @@ setInterval(async function () {
     await browser.close();
     main();
 }, 300000);
+
+
+function sendBoasVindas() {
+    const buttons = {
+        inline_keyboard: [
+            [{ text: "💰 Entre - Sinal da Sorte! 💰", url: "https://affstream.click/KTHhsv43" }]
+        ]
+    }
+    const message = `✅ Sinais 24 horas por dia\n✅ Usamos Martingale\n\nOpere com segurança\n\n🤑 Comece a operar e faturar agora mesmo!\n🤑 Ganhe um bônus de 200% usando o código NEGODI200👇👇`;
+
+    const bot = new Telegraf("6565328483:AAGOUIwrwo3xiKrqKJsc40wGvDb6aWM67mc"); 
+
+    setInterval(() => {
+        bot.telegram.sendMessage("-1001832440382", message, {
+            parse_mode: 'HTML',
+            reply_markup: buttons
+        });
+    }, 3600000);
+}
+
+sendBoasVindas();
+
