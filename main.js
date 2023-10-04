@@ -6,7 +6,18 @@ const fs = require('fs');
 var browser = null;
 var timearrayinsert = 0;
 
+
+
+
 async function main() {
+
+    function delay(time) {
+        return new Promise(function (resolve) {
+            setTimeout(resolve, time)
+        });
+    }
+
+
     try {
         var arrayresult = [];
         var entrada = "";
@@ -32,8 +43,12 @@ async function main() {
         await page.setViewport({ width, height });
 
 
+       
+
+
         await page.goto('https://sambabet.com/');
 
+        await delay(20000);
 
         await page.click('.btn_general.login_btn');
         await page.type('.login_user.login_txt', 'armando312');
@@ -46,7 +61,7 @@ async function main() {
             }),
         ]);
 
-        await page.goto('https://sambabet.com/casino/game/4975-football-studio');
+        await page.goto('https://sambabet.com/casino/game/43960-futebol-studio-ao-vivo');
 
         const cdp = await page.target().createCDPSession();
         await cdp.send('Network.enable');
@@ -66,7 +81,7 @@ async function main() {
                 if (array[array.length - 1] == "Tiger") {
                     outuput = "AZUL";
                 } else {
-                    outuput = "VERMELHO";
+                    outuput = "AMARELO";
                 }
                 if (array[array.length - 1] == entrada) {
                     const message = `\n✅ GREEN ✅
@@ -89,7 +104,7 @@ async function main() {
                 && array[unique - 1] == array[0]) {
                 var input = "";
                 if (array[unique - 1] == "Tiger") {
-                    input = "VERMELHO";
+                    input = "AMARELO";
                     entrada = "Dragon";
                 } else {
                     input = "AZUL";
