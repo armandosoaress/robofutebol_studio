@@ -168,7 +168,9 @@ setInterval(async function () {
         const hora1 = timearrayinsert;
         const hora2 = timearrayinsert2;
         const diferenca = calcularDiferencaHoras(hora1, hora2);
+        console.log(diferenca);
         if (diferenca > "00:00:57") {
+            timearrayinsert = 0;
             await browser.close();
             main();
         }
