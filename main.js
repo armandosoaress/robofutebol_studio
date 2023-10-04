@@ -42,13 +42,9 @@ async function main() {
         // Define o tamanho da janela da página para as dimensões da tela do dispositivo
         await page.setViewport({ width, height });
 
-
-       
-
-
         await page.goto('https://sambabet.com/');
 
-        await delay(20000);
+        // await delay(20000);
 
         await page.click('.btn_general.login_btn');
         await page.type('.login_user.login_txt', 'armando312');
