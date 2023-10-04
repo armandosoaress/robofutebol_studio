@@ -45,7 +45,7 @@ async function main() {
         await page.goto('https://sambabet.com/');
 
         
-        await delay(10000);
+        // await delay(10000);
 
 
 
