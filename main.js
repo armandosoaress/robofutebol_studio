@@ -4,6 +4,7 @@ const fs = require('fs');
 
 
 var browser = null;
+var timearrayinsert = 0;
 
 async function main() {
     try {
@@ -112,6 +113,8 @@ async function main() {
                 var obj = JSON.parse(response.response.payloadData);
                 try {
                     arrayresult.push(obj.args.result.winner);
+                    const dataAtual = new Date();
+                    timearrayinsert = dataAtual.toLocaleTimeString()
                     sendTelegram(arrayresult);
                 } catch (error) {
                     // console.log(error);
@@ -146,6 +149,31 @@ async function main() {
         console.log(error);
     }
 }
+
+
+
+function calcularDiferencaHoras(hora1, hora2) {
+    const [h1, m1, s1] = hora1.split(':').map(Number);
+    const [h2, m2, s2] = hora2.split(':').map(Number);
+    const diferencaEmSegundos = Math.abs((h1 * 3600 + m1 * 60 + s1) - (h2 * 3600 + m2 * 60 + s2));
+    const diferencaHoras = String(Math.floor(diferencaEmSegundos / 3600)).padStart(2, '0');
+    const diferencaMinutos = String(Math.floor((diferencaEmSegundos % 3600) / 60)).padStart(2, '0');
+    const diferencaSegundos = String(diferencaEmSegundos % 60).padStart(2, '0');
+    return `${diferencaHoras}:${diferencaMinutos}:${diferencaSegundos}`;
+}
+
+setInterval(async function () {
+    if (timearrayinsert != 0) {
+        timearrayinsert2 = new Date().toLocaleTimeString();
+        const hora1 = timearrayinsert;
+        const hora2 = timearrayinsert2;
+        const diferenca = calcularDiferencaHoras(hora1, hora2);
+        if (diferenca > "00:00:57") {
+            await browser.close();
+            main();
+        }
+    }
+}, 1000);
 
 main();
 setInterval(async function () {
