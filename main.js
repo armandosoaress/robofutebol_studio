@@ -14,8 +14,7 @@ async function main() {
         browser = await puppeteer.launch({
             // "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
             executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
-            headless: false,
-            args: ['--start-fullscreen'],
+            headless: false
         });
 
         const pages = await browser.pages();
