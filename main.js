@@ -45,9 +45,7 @@ async function main() {
         await page.goto('https://sambabet.com/');
 
         
-        // await delay(10000);
-
-
+        await delay(10000);
 
         await page.click('.btn_general.login_btn');
         await page.type('.login_user.login_txt', 'armando312');
